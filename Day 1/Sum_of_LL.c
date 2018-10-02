@@ -11,3 +11,21 @@ Explanation: 342 + 465 = 807.
 **/
 
 /**  Your Solution goes here   **/
+
+node* add_data(linked_list1,linked_list2){
+  
+  node* new_node = (node*)malloc(sizeof(node));
+  n1=linked_list1->head;
+  n2=linked_list2->head;
+  n3=new_node;
+  while(n1!=NULL){
+    n3->data=n1->data+n2->data;
+    n1=n1->next;
+    n2=n2->next;
+    node* next_node = (node*)malloc(sizeof(node));
+    n3->next=next_node;
+    n3=n3->next;
+  }
+  return new_node;
+}
+   
